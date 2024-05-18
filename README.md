@@ -12,8 +12,7 @@
 
 
 
-## Instalación del proyecto  interfaz de usuario De Vue
-# app-vue
+## app-vue "Instalación del proyecto  interfaz de usuario De Vue"
 
 1. Navegue a la carpeta de su proyecto Angular: `cd client`
 2. Install project dependencies: `npm install`
