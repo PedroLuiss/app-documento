@@ -7,18 +7,18 @@
     >
       <div class="mb-4" v-show="alreadyTaken">
         <div class="font-medium text-red-600">
-          Whoops! Something went wrong.
+          ¡Vaya! Algo salió mal.
         </div>
         <ul class="mt-3 list-inside text-sm text-red-600">
-          <li class="ml-1.5">These credentials do not match our records.</li>
+          <li class="ml-1.5">Estas credenciales no coinciden con nuestros registros.</li>
         </ul>
       </div>
       <div class="mb-4" v-show="emptyField">
         <div class="font-medium text-red-600">
-          Whoops! Something went wrong.
+          ¡Vaya! Algo salió mal.
         </div>
         <ul class="mt-3 list-inside text-sm text-red-600">
-          <li class="ml-1.5">Please fill out empty fields.</li>
+          <li class="ml-1.5">Por favor complete los campos vacíos.</li>
         </ul>
       </div>
       <form @submit.prevent="submitForm">
@@ -112,7 +112,6 @@ export default {
             }, 3000);
           }
           if (
-            this.formValues.name == "" ||
             this.formValues.email == "" ||
             this.formValues.password == ""
           ) {

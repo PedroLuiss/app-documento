@@ -14,7 +14,7 @@
           : 'bg-white text-gray-500'
       "
     >
-      <router-link class="mr-2 font-thin text-md hover:underline hover:underline-offset-4 h3" to="/documentos">Lista de cocumento</router-link>
+      <router-link class="mr-2 font-thin text-md hover:underline hover:underline-offset-4 h3" to="/documentos">Lista De Documento</router-link>
 
    
     </div>
