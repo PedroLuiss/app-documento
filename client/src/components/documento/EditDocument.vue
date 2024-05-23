@@ -243,6 +243,7 @@
       this.getTipo();
       this.getProceso();
       this.getDocument(this.$route.params.id);
+      this.$store.dispatch("fetchUser");
     },
   };
   </script>

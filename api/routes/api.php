@@ -9,6 +9,7 @@ use App\Http\Controllers\Api\V2\Auth\RegisterController;
 use App\Http\Controllers\Api\V2\Auth\ForgotPasswordController;
 use App\Http\Controllers\Api\V2\Auth\ResetPasswordController;
 use App\Http\Controllers\DocumentController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +33,10 @@ Route::prefix('v2')->middleware('json.api')->group(function () {
 
 
 Route::middleware(['auth:api','json.api'])->group(function () {
+
+    /**----------------------------------------------------ROUTER USER---------------------------------------------------- */
+    Route::get('/user', [UserController::class, 'findUserAuth'])->name('users.auth.index');
+    /**----------------------------------------------------END USER---------------------------------------------------- */
 
      /**----------------------------------------------------ROUTER DOCUMETN---------------------------------------------------- */
      Route::get('/document/list', [DocumentController::class, 'list_document'])->name('document.listdocument');

@@ -8,7 +8,7 @@
         <router-link to="/">Sistema de documento</router-link>
       </div>
       <div v-else>
-        <p>Bienvenido </p>
+        <p>Bienvenido, {{ authUser.name }} </p>
       </div>
     </div>
     <div class="mr-4">
@@ -32,7 +32,7 @@
           class="cursor-pointer bg-red-500 text-white dot text-center hover:bg-red-400"
           @click="isShow = !isShow"
         >
-          A
+        {{ $store.state.authUser.name }}
         </span>
       </div>
       <div
@@ -71,8 +71,9 @@ export default {
   },
   methods: {
     logOut() {
+      var self = this;
       axios
-        .post("http://127.0.0.1:8000/api/v2/logout")
+        .post(self.$store.state.apiAdress+"/api/v2/logout")
         .then((response) => {
           localStorage.removeItem("token");
           window.location.href = "/";
@@ -86,6 +87,7 @@ export default {
     },
     
   },
+  
 };
 </script>
 

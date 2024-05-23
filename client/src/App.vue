@@ -1,7 +1,6 @@
 <template>
   <div
-    class="h-screen w-screen"
-    :class="$store.state.authUser.dark_mode == 1 ? 'dark-mode' : 'bg-gray-100'"
+    class="h-screen w-screen bg-gray-100"
   >
     <Navbar />
     <router-view />
@@ -28,7 +27,9 @@ export default {
     setTimeout(() => {
       this.$store.state.isPageLoading = false;
     }, 2000);
+   
   },
+  
 };
 </script>
 

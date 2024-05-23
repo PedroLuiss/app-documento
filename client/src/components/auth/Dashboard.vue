@@ -7,12 +7,8 @@
     class="flex w-80 h-96 items-center justify-center mx-auto lg:my-44 lg:w-96 lg:h-122"
   >
     <div
-      class="p-2 shadow-md rounded-md w-96 h-32 flex items-center justify-center"
-      :class="
-        $store.state.authUser.dark_mode == 1
-          ? 'dark-mode text-gray-100'
-          : 'bg-white text-gray-500'
-      "
+      class="p-2 shadow-md rounded-md w-96 h-32 flex items-center justify-center bg-white text-gray-500"
+     
     >
       <router-link class="mr-2 font-thin text-md hover:underline hover:underline-offset-4 h3" to="/documentos">Lista De Documento</router-link>
 
@@ -25,7 +21,11 @@
 export default {
   created() {
     console.log("Creado");
+   
   },
+  mounted(){
+    this.$store.dispatch("fetchUser");
+  }
 };
 </script>
 <style scoped>

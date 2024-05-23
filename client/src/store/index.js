@@ -25,10 +25,13 @@ export default createStore({
   },
   actions: {
     fetchUser({ commit }) {
+      console.log("fetchUser...");
+      var self = this;
       axios
-        .get(this.apiAdress+"/api/user")
+        .get(self.state.apiAdress+"/api/user")
         .then((response) => {
-          commit("setUser", response.data.user);
+          console.log(response.data);
+          commit("setUser", response.data);
         })
         .catch((error) => {
           if (error.response.status == 401) {

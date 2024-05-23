@@ -75,6 +75,8 @@ import axios from "axios";
 export default {
   created() {
     this.getDocument();
+
+    this.$store.dispatch("fetchUser");
   },
   data: () => {
     return {

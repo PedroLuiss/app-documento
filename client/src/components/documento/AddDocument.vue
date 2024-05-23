@@ -166,6 +166,7 @@ export default {
                   self.mensajes = error.response.data.errors[key][index];
                   self.alertS = true;
                   self.closeAlert();
+                  self.alertClass = "alert alert-danger"
                 });
               }
             }
@@ -234,6 +235,7 @@ export default {
   created() {
     this.getTipo();
     this.getProceso();
+    this.$store.dispatch("fetchUser");
   },
 };
 </script>
