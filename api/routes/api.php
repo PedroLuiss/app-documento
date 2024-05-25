@@ -43,8 +43,8 @@ Route::middleware(['auth:api','json.api'])->group(function () {
      Route::get('/document/tipo/list', [DocumentController::class, 'list_tipo'])->name('document.listdocumenttipo');
      Route::get('/document/proceso/list', [DocumentController::class, 'list_proceso'])->name('document.listdocumentproceso');
      Route::post('/document/store', [DocumentController::class, 'store'])->name('document.store');
-     Route::get('/document/edit/{id}', [DocumentController::class, 'edit'])->name('employee.editemployee');
-     Route::delete('/document/delet/{id}', [DocumentController::class, 'delete_document'])->name('employee.deletemployee');
+     Route::get('/document/edit/{id}', [DocumentController::class, 'edit'])->name('document.editdocument');
+     Route::delete('/document/delet/{id}', [DocumentController::class, 'delete_document'])->name('document.deletdocument');
      /**----------------------------------------------------END ROUTER DOCUMETN---------------------------------------------------- */
 });
 
